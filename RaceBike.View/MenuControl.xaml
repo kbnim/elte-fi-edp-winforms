@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="RaceBike.View.MenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RaceBike.View"
+             mc:Ignorable="d" Height="200" Width="140">
+    <StackPanel Background="DarkGray">
+        <Label Name="titleLabel" HorizontalAlignment="Center" FontWeight="Bold" Content="{Binding TitleText}"/>
+        <Label Name="additionalInfo1Label" Content="{Binding Description01Text}"/>
+        <Label Name="additionalInfo2Label" Content="{Binding Description02Text}"/>
+        <Button Name="newResumeButton" Padding="3" Content="{Binding NewResumeText}" Command="{Binding NewResumeContinueButtonCommand}"/>
+        <Button Name="loadButton" Content="Load" Padding="3" Command="{Binding LoadButtonCommand}"/>
+        <Button Name="saveButton" Content="Save" Padding="3" Command="{Binding SaveButtonCommand}" IsEnabled="{Binding SaveButtonEnablement}"/>
+        <Button Name="helpButton" Content="Help" Padding="3" Command="{Binding HelpButtonCommand}"/>
+        <Button Name="quitButton" Content="Quit" Padding="3" Command="{Binding QuitButtonCommand}"/>
+    </StackPanel>
+</UserControl>
